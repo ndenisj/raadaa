@@ -32,186 +32,188 @@ class UserDetailView extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 padding: EdgeInsets.all(10.w),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '${userDetail['name']}',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20.sp,
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '${userDetail['name']}',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.sp,
+                        ),
                       ),
-                    ),
-                    Text(
-                      '@${userDetail['username']}',
-                      style: TextStyle(
-                        fontSize: 16.sp,
+                      Text(
+                        '@${userDetail['username']}',
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 20.h),
-                    Text(
-                      'Contact Info.',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18.sp,
+                      SizedBox(height: 20.h),
+                      Text(
+                        'Contact Info.',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.sp,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 10.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Phone',
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(
-                            '${userDetail['phone']}',
+                      SizedBox(height: 10.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Phone',
                             style: TextStyle(
-                              fontSize: 16.sp,
+                              fontSize: 14.sp,
                             ),
-                            textAlign: TextAlign.end,
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 10.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Email',
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(
-                            '${userDetail['email']}',
-                            style: TextStyle(
-                              fontSize: 16.sp,
+                          Expanded(
+                            child: Text(
+                              '${userDetail['phone']}',
+                              style: TextStyle(
+                                fontSize: 16.sp,
+                              ),
+                              textAlign: TextAlign.end,
                             ),
-                            textAlign: TextAlign.end,
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 10.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Website',
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(
-                            '${userDetail['website']}',
-                            style: TextStyle(
-                              fontSize: 16.sp,
-                            ),
-                            textAlign: TextAlign.end,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 20.h),
-                    Text(
-                      'Address',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18.sp,
+                        ],
                       ),
-                    ),
-                    SizedBox(height: 10.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Suite',
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(
-                            '${userDetail['address']['suite']}',
+                      SizedBox(height: 10.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Email',
                             style: TextStyle(
-                              fontSize: 16.sp,
+                              fontSize: 14.sp,
                             ),
-                            textAlign: TextAlign.end,
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 10.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Street',
-                          style: TextStyle(
-                            fontSize: 14.sp,
+                          Expanded(
+                            child: Text(
+                              '${userDetail['email']}',
+                              style: TextStyle(
+                                fontSize: 16.sp,
+                              ),
+                              textAlign: TextAlign.end,
+                            ),
                           ),
-                        ),
-                        Expanded(
-                          child: Text(
-                            '${userDetail['address']['street']}',
+                        ],
+                      ),
+                      SizedBox(height: 10.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Website',
                             style: TextStyle(
-                              fontSize: 16.sp,
+                              fontSize: 14.sp,
                             ),
-                            textAlign: TextAlign.end,
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 10.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'City',
-                          style: TextStyle(
-                            fontSize: 14.sp,
+                          Expanded(
+                            child: Text(
+                              '${userDetail['website']}',
+                              style: TextStyle(
+                                fontSize: 16.sp,
+                              ),
+                              textAlign: TextAlign.end,
+                            ),
                           ),
+                        ],
+                      ),
+                      SizedBox(height: 20.h),
+                      Text(
+                        'Address',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.sp,
                         ),
-                        Expanded(
-                          child: Text(
-                            '${userDetail['address']['city']}',
+                      ),
+                      SizedBox(height: 10.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Suite',
                             style: TextStyle(
-                              fontSize: 16.sp,
+                              fontSize: 14.sp,
                             ),
-                            textAlign: TextAlign.end,
                           ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 10.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Zipcode',
-                          style: TextStyle(
-                            fontSize: 14.sp,
+                          Expanded(
+                            child: Text(
+                              '${userDetail['address']['suite']}',
+                              style: TextStyle(
+                                fontSize: 16.sp,
+                              ),
+                              textAlign: TextAlign.end,
+                            ),
                           ),
-                        ),
-                        Expanded(
-                          child: Text(
-                            '${userDetail['address']['zipcode']}',
+                        ],
+                      ),
+                      SizedBox(height: 10.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Street',
                             style: TextStyle(
-                              fontSize: 16.sp,
+                              fontSize: 14.sp,
                             ),
-                            textAlign: TextAlign.end,
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
+                          Expanded(
+                            child: Text(
+                              '${userDetail['address']['street']}',
+                              style: TextStyle(
+                                fontSize: 16.sp,
+                              ),
+                              textAlign: TextAlign.end,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'City',
+                            style: TextStyle(
+                              fontSize: 14.sp,
+                            ),
+                          ),
+                          Expanded(
+                            child: Text(
+                              '${userDetail['address']['city']}',
+                              style: TextStyle(
+                                fontSize: 16.sp,
+                              ),
+                              textAlign: TextAlign.end,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10.h),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Zipcode',
+                            style: TextStyle(
+                              fontSize: 14.sp,
+                            ),
+                          ),
+                          Expanded(
+                            child: Text(
+                              '${userDetail['address']['zipcode']}',
+                              style: TextStyle(
+                                fontSize: 16.sp,
+                              ),
+                              textAlign: TextAlign.end,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
